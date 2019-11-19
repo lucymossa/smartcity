@@ -1,21 +1,14 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+//Push .sub out of frame
+var push = window.innerHeight;
+var start = document.getElementsByClassName("start");
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+for (var i = 0; i < start.length; i++) {
+  start[i].style.paddingTop = push + "px";
 }
 
-function showSlides(n) {
-    var slides = document.getElementsByClassName("mySlides");
-    
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (var i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slides[slideIndex-1].style.display = "block";
-}
-
-document.getElementById("next").onclick = function(){
-  showSlides(slideIndex += 1);
-}
+window.addEventListener("resize", function(event) {
+  var push = window.innerHeight;
+  for (var i = 0; i < start.length; i++) {
+    start[i].style.paddingTop = push + "px";
+  }
+});

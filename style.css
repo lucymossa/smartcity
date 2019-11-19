@@ -51,6 +51,7 @@ table {
 html {
     width: 100%;
     height: 100%;
+    user-select: none;
 }
 
 body {
@@ -58,18 +59,13 @@ body {
     text-align: center;
     text-transform: lowercase;
     color: white;
-    background-image: linear-gradient(#99B4C3, #D5E4EC);
-    overflow: hidden;
-    user-select: none;
 }
 
+/* TYPE */
+
 h1 {
-    font-size: 3.563em;
+    font-size: 3.75em;
     font-weight: 700;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 h2 {
@@ -82,93 +78,90 @@ p {
     line-height: 1.875em;
 }
 
-.mySlides {
-    display: none;
+/* DIVS */
+
+.container {
     width: 100%;
     height: 100%;
-    position: absolute;
+    background: linear-gradient(-45deg, #7AC141, #2A4217, #5B8F31, #A4CC83);
+    background-size: 300% 300%;
+    animation: gradient 15s ease infinite;
 }
 
-.textbox {
-    width: 60%;
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.start, .sub {
     position: relative;
-    z-index: 3000;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-img {
-    height: 70%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-  
-#next {
-    cursor: pointer;
-    color: white;
-    font-size: 2.25em;
-    z-index: 2000;
-    position: fixed;
-    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.slide {
-    -webkit-animation-name: slide;
-    -webkit-animation-duration: 1.25s;
-    animation-name: slide;
-    animation-duration: 1.25s;
+.sub {
+    width: 60%;
+    padding: 3% 0;
 }
-  
-  @-webkit-keyframes slide {
-    from {margin-left: 100%;}
-    to {margin-left: 0%;}
-  }
-  
-  @keyframes slide {
-    from {margin-left: 100%;}
-    to {margin-left: 0%;}
-  }
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* IMGS */
+
+img {
+    padding-top: 3%;
+    width: 35%;
+}
+
+.start img {
+    width: 65%;
+}
+
+/* MISCELLANEOUS */
+
+hr {
+    width: 85%;
+}
 
 /*-------------------------------------*/
 
-@media (max-width: 1050px) {
-    h2 {
-        font-size: 2.438em;
-    }
-    
-    p {
-        font-size: 1.219em;
-    }
-
-    #next {
-        font-size: 3.563em;
+@media (max-width: 1050px) {    
+    .start img {
+        width: 50%;
     }
 }
 
 @media (max-width: 450px) {
     h1 {
-        font-size: 2.625em;
+        font-size: 2.25em;
     }
-
+    
     h2 {
-        font-size: 1.313em;
+        font-size: 1.5em;
     }
     
     p {
         font-size: 0.75em;
         line-height: 1.5em;
     }
-    
-    .textbox {
-        width: 70%;
+
+    .center {
+        width: 60%;
     }
     
-    #next {
-        font-size: 3.188em;
+    .start img {
+        width: 70%;
     }
 }
