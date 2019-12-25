@@ -85,7 +85,7 @@ p {
     height: 100%;
     background: linear-gradient(-45deg, #7AC141, #2A4217, #5B8F31, #A4CC83);
     background-size: 300% 300%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 10s ease infinite;
 }
 
 @keyframes gradient {
