@@ -152,7 +152,12 @@ td, th {
 
 th {
     font-weight: 700;
-  }
+}
+
+video {
+    height: 50%;
+    width: 50%;
+}
 
 /* TOP NAV */
 
