@@ -1,17 +1,17 @@
-// //Push .sub out of frame
-// var push = window.innerHeight;
-// var start = document.getElementsByClassName("start");
+//Push .sub out of frame
+var push = window.innerHeight;
+var start = document.getElementsByClassName("start");
 
-// for (var i = 0; i < start.length; i++) {
-//   start[i].style.paddingTop = push + "px";
-// }
+for (var i = 0; i < start.length; i++) {
+  start[i].style.paddingTop = push + "px";
+}
 
-// window.addEventListener("resize", function(event) {
-//   var push = window.innerHeight;
-//   for (var i = 0; i < start.length; i++) {
-//     start[i].style.paddingTop = push + "px";
-//   }
-// });
+window.addEventListener("resize", function(event) {
+  var push = window.innerHeight;
+  for (var i = 0; i < start.length; i++) {
+    start[i].style.paddingTop = push + "px";
+  }
+});
 
 // Open and close mobile menu
 var menuIcon = document.getElementById('mobile-menu-opener');
